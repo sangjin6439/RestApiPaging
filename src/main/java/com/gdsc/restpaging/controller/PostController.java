@@ -1,7 +1,7 @@
 package com.gdsc.restpaging.controller;
 
 
-import com.gdsc.restpaging.domain.Post;
+import com.gdsc.restpaging.domain.PageCustomize;
 import com.gdsc.restpaging.dto.PostDTO;
 import com.gdsc.restpaging.dto.PostPagingDto;
 import com.gdsc.restpaging.service.PostService;
@@ -22,7 +22,7 @@ public class PostController {
     }
 
     @GetMapping
-    public Page<PostDTO> findAll(@RequestBody PostPagingDto postPagingDto){
+    public PageCustomize findAll(@RequestBody PostPagingDto postPagingDto){
         return postService.findAllPosts(postPagingDto);
     }
 }
