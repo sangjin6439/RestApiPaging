@@ -18,4 +18,5 @@ public class PostDTO {
         this.title = post.getTitle();
         this.content = post.getContent();
     }
+
 }
